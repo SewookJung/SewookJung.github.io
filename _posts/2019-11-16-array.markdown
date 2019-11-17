@@ -4,6 +4,7 @@ layout: post
 
 # 같은 클래스 이름을 가지는 div 이벤트 처리
 
+<br>
 배열을 JS에서 이용하다 알아낸 내용을 포스팅 하려고 한다<br>
 
 ## 1. 문제점
@@ -37,7 +38,7 @@ layout: post
 ## 4. 해결방안 찾아보기
 
 - console.log(colors)
-  ![console_log.jpg](../images/2019-11-16-array/console_log.jpg)
+  ![console_log.jpg](../images/2019-11-16-array/console_log.JPG)
   보아하니 colors 변수가 배열(array)로 되어있는 모습이다.
   즉, 위의 에러코드는 <strong>배열에 직접 addeventlistener를 사용해서 출력 된 에러다..!!</strong><br>
   그럼 사용을 하려면 대충 이런 코드를 써야 할 것이다.
@@ -59,7 +60,6 @@ layout: post
   ```
   Array.from(colors).forEach(color => color.addeventlistener(
     "click", getColor));
-
   ```
 
   colors 변수를 배열로 만든 후 forEach 메서드를 사용하여 각각의 element 각각에 대해 실행하는 코드입니다! [ - (출처) forEach-MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
